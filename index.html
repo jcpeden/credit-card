@@ -7,36 +7,206 @@
 		src="angular.min.js"></script>
 	<script
 		src="app.js"></script>
-	<title>Angular App</title>
+	<title>Credit Card Airline Points</title>
 </head>
 
 <body ng-controller="HelloCtrl">
+		
+	<div class="container-fluid">
+			<div class="row">
 
-	<div class="container">
-		<div class="page-header" style="margin: 0">
-			<h1>Hello World</h1>
-		</div>
-		<div style="padding-top: 15px">This example demonstrate the code
-			sample for Hello World program. Type your name in the text field
-			below</div>
-		<div style="padding-top: 30px">
-			<div style="padding: 0px 0px 20px 30px">
-				<h4>Hello {{ name }}! How are you doing today</h4></div>
-			<form class="form-horizontal" role="form" method="post" action="#">
-				<div class="form-group">
-					<label class="col-md-1 control-label">Name</label>
-					<div class="col-md-3">
-						<input type="text" class="form-control" name="firstname"
-							ng-model="name">
+				<div class="col-sm-12 main">
+					<h1 class="page-header">Compare Credit Cards</h1>
+
+					<h2 class="sub-header">Recommended Cards</h2>
+					<div class="row placeholders">
+						<div class="col-xs-6 col-sm-3 placeholder">
+							<a href="javascript:void(0);"><img height="177" width="284" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+							<h4>American Express Preferred Rewards Gold</h4>
+							<span class="text-muted">20,000 points, no fee</span>
+						</div>
+						<div class="col-xs-6 col-sm-3 placeholder">
+							<a href="javascript:void(0);"><img height="177" width="284" src="images/hilton.jpg" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+							<h4>Hilton HHonors Platinum Visa</h4>
+							<span class="text-muted">20,000 points, no fee</span>
+						</div>
+						<div class="col-xs-6 col-sm-3 placeholder">
+							<a href="javascript:void(0);"><img height="177" width="284" src="images/amex-platinum.png" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+							<h4>American Express Platinum</h4>
+							<span class="text-muted">20,000 points, no fee</span>
+						</div>
+						<div class="col-xs-6 col-sm-3 placeholder">
+							<a href="javascript:void(0);"><img height="177" width="284" src="images/ihg.png" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+							<h4>IHG Rewards Club Visa / Premium Visa</h4>
+							<span class="text-muted">20,000 points, no fee</span>
+						</div>
+					</div>
+
+					<h2 class="sub-header">Section title</h2>
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th colspan="2">Credit Card</th>
+									<th>Fee</th>
+									<th>Bonus</th>
+									<th>Minimum Spend</th>
+									<th>Time Limit</th>
+									<th>Application Link</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>American Express Preferred Rewards Gold</td>
+									<td>£125</td>
+									<td>22,000 Membership Rewards points</td>
+									<td>£2,000</td>
+									<td>90 days</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>American Express Platinum</td>
+									<td>£450</td>
+									<td>35,000 Membership Rewards points</td>
+									<td>£2,000</td>
+									<td>90 days</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>British Airways American Express</td>
+									<td>£0</td>
+									<td>3,000 Avios points</td>
+									<td>£500</td>
+									<td>90 days</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>British Airways American Express Premium Plus</td>
+									<td>£150</td>
+									<td>18,000 Avios points</td>
+									<td>£3,000</td>
+									<td>90 days</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>Lloyds Avios Rewards American Express and MasterCard</td>
+									<td>£24</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>Lloyds Premier Avios Rewards American Express and MasterCard</td>
+									<td>£140</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>Lloyds Choice Rewards American Express & MasterCard</td>
+									<td>£24</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>TSB Avios American Express and MasterCard</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>TSB Premier Avios American Express and MasterCard</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>Virgin Atlantic White American Express and Visa</td>
+									<td>£0</td>
+									<td>10,000 Virgin Flying Club miles</td>
+									<td>-</td>
+									<td>-</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>Virgin Atlantic Black American Express and Visa</td>
+									<td>£14</td>
+									<td>25,000 Virgin Flying Club miles</td>
+									<td>-</td>
+									<td>-</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>Hilton HHonors Platinum Visa</td>
+									<td>£0</td>
+									<td>Free night at any Hilton</td>
+									<td>£750</td>
+									<td>90 days</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>IHG Rewards Club Visa</td>
+									<td>£0</td>
+									<td>30,000 IHG Rewards Club points</td>
+									<td>£1</td>
+									<td>90 days</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>IHG Rewards Club Premium Visa</td>
+									<td>£99</td>
+									<td>60,000 IHG Rewards Club points</td>
+									<td>£1</td>
+									<td>90 days</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>Marriott Rewards MasterCard</td>
+									<td>£0</td>
+									<td>10,000 Marriott Rewards points</td>
+									<td>£200</td>
+									<td>180 days</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+								<tr>
+									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
+									<td>Starwood Preferred Guest American Express</td>
+									<td>£75</td>
+									<td>10,000 SPG points</td>
+									<td>£1,000</td>
+									<td>90 days</td>
+									<td><a href="javascript:void(0);">Apply now</a></td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
-			</form>
+			</div>
 		</div>
-	
-	</div>
 
 </body>
 
 </html>
-
-
