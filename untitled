@@ -1,0 +1,7 @@
+<td><img height="100" width="160" src="images/{{ card.imageName }}" class="img-responsive" alt="{{ card.cardName }}"></td>
+									<td>[{{ card.cardName }}]</td>
+									<td>&pound; {{ card.cardFree }} </td>
+									<td>{{ card.cardBonus }} {{ card.bonusCurrency }}</td>
+									<td>&pound; {{ card.minSpend }}</td>
+									<td>{{ card.spendTimeLimit }} days</td>
+									<td><a href="{{ card.cardURL }}" title="{{ card.cardName }}">Apply now</a></td>

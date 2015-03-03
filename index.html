@@ -20,25 +20,10 @@
 
 					<h2 class="sub-header">Recommended Cards</h2>
 					<div class="row placeholders">
-						<div class="col-xs-6 col-sm-3 placeholder">
-							<a href="javascript:void(0);"><img height="177" width="284" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></a>
-							<h4>American Express Preferred Rewards Gold</h4>
-							<span class="text-muted">20,000 points, no fee</span>
-						</div>
-						<div class="col-xs-6 col-sm-3 placeholder">
-							<a href="javascript:void(0);"><img height="177" width="284" src="images/hilton.jpg" class="img-responsive" alt="Generic placeholder thumbnail"></a>
-							<h4>Hilton HHonors Platinum Visa</h4>
-							<span class="text-muted">20,000 points, no fee</span>
-						</div>
-						<div class="col-xs-6 col-sm-3 placeholder">
-							<a href="javascript:void(0);"><img height="177" width="284" src="images/amex-platinum.png" class="img-responsive" alt="Generic placeholder thumbnail"></a>
-							<h4>American Express Platinum</h4>
-							<span class="text-muted">20,000 points, no fee</span>
-						</div>
-						<div class="col-xs-6 col-sm-3 placeholder">
-							<a href="javascript:void(0);"><img height="177" width="284" src="images/ihg.png" class="img-responsive" alt="Generic placeholder thumbnail"></a>
-							<h4>IHG Rewards Club Visa / Premium Visa</h4>
-							<span class="text-muted">20,000 points, no fee</span>
+						<div class="col-xs-6 col-sm-3 placeholder" ng-repeat="card in cards" ng-if="$index < 4">
+							<a href="{{ card.cardURL }}" title="{{ card.cardName }}"><img height="177" width="284" src="images/{{ card.imageName }}" class="img-responsive" alt="{{ card.cardName }}"></a>
+							<h4>{{ card.cardName }}</h4>
+							<span class="text-muted">{{ card.cardBonus }} {{ card.bonusCurrency }}</span>
 						</div>
 					</div>
 
@@ -56,14 +41,14 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr ng-repeat"cards in card">
-									<td><img height="100" width="160" src="images/amex-gold.jpeg" class="img-responsive" alt="Generic placeholder thumbnail"></td>
-									<td>Starwood Preferred Guest American Express</td>
-									<td>£75</td>
-									<td>10,000 SPG points</td>
-									<td>£1,000</td>
-									<td>90 days</td>
-									<td><a href="javascript:void(0);">Apply now</a></td>
+								<tr ng-repeat="card in cards">
+									<td><img height="100" width="160" src="images/{{ card.imageName }}" class="img-responsive" alt="{{ card.cardName }}"></td>
+									<td>{{ card.cardName }}</td>
+									<td>&pound;{{ card.cardFree }} </td>
+									<td>{{ card.cardBonus }} {{ card.bonusCurrency }}</td>
+									<td>&pound;{{ card.minSpend }}</td>
+									<td>{{ card.spendTimeLimit }} days</td>
+									<td><a href="{{ card.cardURL }}" title="{{ card.cardName }}">Apply now</a></td>
 								</tr>
 							</tbody>
 						</table>
