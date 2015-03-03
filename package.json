@@ -1,0 +1,14 @@
+{
+  "name": "credit-card-comparison",
+  "version": "1.0.0",
+  "description": "An application to compare airline reward point bonuses from UK credit cards",
+  "author": "John Peden <john@tweakdigital.co.uk>",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/jcpeden/angular"
+  },
+  "preferGlobal": true,
+  "subdomain": "creditcardairlinepoints",
+  "analyze": true,
+  "license": "MIT"
+}
