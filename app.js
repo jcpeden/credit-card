@@ -7,161 +7,163 @@ angular.module("creditcardApp").controller("creditcardCtrl", function($scope) {
 			cardName: "American Express Preferred Rewards Gold",
 			cardBonus: 22000,
 			bonusCurrency: "Membership Rewards",
-			cardFree: 125,
+			cardFee: 125,
 			imageName: "amex-gold.jpg", 
 			minSpend: 2000,
 			spendTimeLimit: 90,
-			cardURL: "javascript:void(0);"
+			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:gold&journey=B&intlink=uk-amex-cardshop-goldcard-detail-applynow-main"
 		},
 		{
 			cardName: "American Express Platinum",
 			cardBonus: 35000,
 			bonusCurrency: "Membership Rewards",
-			cardFree: 450,
+			cardFee: 450,
 			imageName: "amex-platinum.jpg", 
 			minSpend: 2000,
 			spendTimeLimit: 90,
-			cardURL: "javascript:void(0);"
+			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:platinum_charge&journey=B&intlink=uk-amex-cardshop-platinumcard-detail-applynow-main"
 		},
 		{
 			cardName: "British Airways American Express",
 			cardBonus: 3000,
 			bonusCurrency: "Avios",
-			cardFree: 0,
+			cardFee: 0,
 			imageName: "ba.jpg", 
 			minSpend: 500,
 			spendTimeLimit: 90,
-			cardURL: "javascript:void(0);"
+			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:triCredit&journey=B&intlink=uk-amex-cardshop-britishairwaysamericanexpresscreditcard-detail-applynow-main"
 		},
 		{
 			cardName: "British Airways American Express Premium Plus",
 			cardBonus: 18000,
 			bonusCurrency: "Avios",
-			cardFree: 125,
+			cardFee: 125,
 			imageName: "ba-premium-plus.jpg", 
 			minSpend: 2000,
 			spendTimeLimit: 90,
-			cardURL: "javascript:void(0);"
+			cardURL: "https://www252.americanexpress.com/inga3/uk/pers/begin.do?perform=IntlEapp:UK:triPremiumPlus&intlink=uk-amex-cardshop-BritishAirwaysPremiumPlus-detail-applynow-main"
 		},
 		{
 			cardName: "Lloyds Avios Rewards American Express & MasterCard",
-			cardBonus: "",
+			cardBonus: 0,
 			bonusCurrency: "",
-			cardFree: 24,
+			cardFee: 24,
 			imageName: "lloyds-rewards.jpg", 
-			minSpend: "",
-			spendTimeLimit: "",
-			cardURL: "javascript:void(0);"
+			minSpend: 0,
+			spendTimeLimit: 0,
+			cardURL: "https://apply.lloydsbank.co.uk/personal/a/apply_credit_card/PS_LAvios_HP2812"
 		},
 		{
 			cardName: "Lloyds Premier Avios Rewards American Express & MasterCard",
-			cardBonus: "",
+			cardBonus: 0,
 			bonusCurrency: "",
-			cardFree: 140,
+			cardFee: 140,
 			imageName: "lloyds-premier.jpg", 
-			minSpend: "",
-			spendTimeLimit: "",
-			cardURL: "javascript:void(0);"
+			minSpend: 0,
+			spendTimeLimit: 0,
+			cardURL: "https://apply.lloydsbank.co.uk/personal/a/apply_credit_card/PS_LAviosPremier_HP2812"
 		},
 		{
 			cardName: "Lloyds Choice Rewards American Express & MasterCard",
-			cardBonus: "",
+			cardBonus: 0,
 			bonusCurrency: "",
-			cardFree: 24,
+			cardFee: 24,
 			imageName: "lloyds-choice.jpg", 
-			minSpend: "",
-			spendTimeLimit: "",
-			cardURL: "javascript:void(0);"
+			minSpend: 0,
+			spendTimeLimit: 0,
+			cardURL: "https://apply.lloydsbank.co.uk/personal/a/apply_credit_card/PS_Lloyds_Choice2812"
 		},
 		{
 			cardName: "TSB Avios American Express & MasterCard",
-			cardBonus: "",
+			cardBonus: 0,
 			bonusCurrency: "",
-			cardFree: "",
+			cardFee: 0,
 			imageName: "tsb.jpg", 
-			minSpend: "",
-			spendTimeLimit: "",
-			cardURL: "javascript:void(0);"
+			minSpend: 0,
+			spendTimeLimit: 0,
+			cardURL: "https://apply.tsb.co.uk/personal/a/apply_credit_card/PS_TSBDuoAvios"
 		},
 		{
 			cardName: "TSB Premier Avios American Express & MasterCard",
-			cardBonus: "",
+			cardBonus: 0,
 			bonusCurrency: "",
-			cardFree: "",
+			cardFee: 0,
 			imageName: "tsb-premier.jpg", 
-			minSpend: "",
-			spendTimeLimit: "",
-			cardURL: "javascript:void(0);"
+			minSpend: 0,
+			spendTimeLimit: 0,
+			cardURL: "https://apply.tsb.co.uk/personal/a/apply_credit_card/PS_TSBPremierDuo"
 		},
 		{
 			cardName: "Virgin Atlantic White American Express & Visa",
 			cardBonus: 10000,
 			bonusCurrency: "Virgin Flying Club",
-			cardFree: "",
+			cardFee: 0,
 			imageName: "virgin-white.jpg", 
 			minSpend: 2000,
 			spendTimeLimit: 90,
-			cardURL: "javascript:void(0);"
+			cardURL: "http://www.virgin-atlantic.com/gb/en/flying-club/credit-card/bonus-white-card.html"
 		},
 		{
 			cardName: "Virgin Atlantic Black American Express & Visa",
 			cardBonus: 25000,
 			bonusCurrency: "Virgin Flying Club",
-			cardFree: 14,
+			cardFee: 14,
 			imageName: "virgin-black.jpg", 
 			minSpend: 2000,
 			spendTimeLimit: 90,
-			cardURL: "javascript:void(0);"
+			cardURL: "http://www.virgin-atlantic.com/gb/en/flying-club/credit-card/bonus-black-card.html"
 		},
 		{
 			cardName: "Hilton HHonors Platinum Visa",
 			cardBonus: 1,
 			bonusCurrency: "Free stay at Hilton property",
-			cardFree: 125,
+			cardFee: 125,
 			imageName: "hilton.jpg", 
-			minSpend: "750",
+			minSpend: 750,
 			spendTimeLimit: 90,
-			cardURL: "javascript:void(0);"
+			cardURL: "http://www.barclaycard.co.uk/personal/credit-cards/hilton"
 		},
 		{
 			cardName: "IHG Rewards Club Visa",
 			cardBonus: 30000,
 			bonusCurrency: "IHG Rewards Club",
-			cardFree: 0,
+			cardFee: 0,
 			imageName: "ihg.jpg", 
 			minSpend: 1,
 			spendTimeLimit: 90,
-			cardURL: "javascript:void(0);"
+			cardURL: "http://www.barclaycard.co.uk/personal/credit-cards/ihg"
 		},
 		{
 			cardName: "IHG Rewards Club Premium Visa",
 			cardBonus: 60000,
 			bonusCurrency: "IHG Rewards Club",
-			cardFree: 99,
+			cardFee: 99,
 			imageName: "ihg-premier.jpg", 
 			minSpend: 1,
 			spendTimeLimit: 90,
-			cardURL: "javascript:void(0);"
+			cardURL: "http://www.barclaycard.co.uk/personal/credit-cards/ihg-premium"
 		},
 		{
 			cardName: "Marriott Rewards MasterCard",
 			cardBonus: 10000,
 			bonusCurrency: "Marriott Rewards",
-			cardFree: 125,
+			cardFee: 125,
 			imageName: "marriott.jpg", 
 			minSpend: 200,
 			spendTimeLimit: 180,
-			cardURL: "javascript:void(0);"
+			cardURL: "https://apply.creation.co.uk/microsites/marriott/?termsAndConditionsCode=MC5307&MC=29990017&operatorCode=WebMC&responseCode=MRRHP4"
 		},
 		{
 			cardName: "American Express Preferred Rewards Gold",
 			cardBonus: 10000,
 			bonusCurrency: "Starwood Preferred Guest",
-			cardFree: 75,
+			cardFee: 75,
 			imageName: "spg.jpg", 
 			minSpend: 1000,
 			spendTimeLimit: 90,
-			cardURL: "javascript:void(0);"
+			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:triCredit&journey=B&intlink=uk-amex-cardshop-britishairwaysamericanexpresscreditcard-detail-applynow-main"
 		}
 	];
+
+	$scope.predicate = "-cardBonus";
 })

@@ -66,6 +66,13 @@ body {
   background-color: #428bca;
 }
 
+table.control td {
+  padding:  0 2px;
+}
+
+table.control .form-control {
+  width: 53px;
+}
 
 /*
  * Main content
