@@ -21,7 +21,7 @@
 		<script src="app.js"></script>
 	</head>
 
-	<body ng-controller="creditcardCtrl">
+	<body ng-controller="creditcardCtrl" ng-init="init()">
 
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
@@ -52,43 +52,43 @@
 					<table class="control">
 						<tbody>
 						<tr>
-							<td>Avios</td><td><input class="form-control" type="text" name="avios"value="1"></td><td>p/point</td>
+							<td>Avios</td><td><input ng-change="updateAvios();" class="form-control" type="number" step="any" min="0" ng-model="avios.val" ng-model="avios.val" step="any" ng-model="avios.val" name="avios" value="1"></td><td>p/point</td>
 						</tr>
 						<tr>
-							<td>Amex MR</td><td><input class="form-control" type="text" name="amexMR" value="1"></td><td>p/point</td>
+							<td>Amex MR</td><td><input ng-change="updateAmex();" class="form-control" type="number" step="any" min="0" ng-model="amex.val"  name="amexMR" value="1"></td><td>p/point</td>
 						</tr>
 						<tr>
-							<td>SPG</td><td><input class="form-control" type="text" name="spg" value="1"></td><td>p/point</td>
+							<td>SPG</td><td><input ng-change="updateSpg();" class="form-control" type="number" step="any" min="0" ng-model="spg.val"  name="spg" value="1"></td><td>p/point</td>
 						</tr>
 						<tr>
-							<td>Virgin Flying Club</td><td><input class="form-control" type="text" name="virgin" value="0.8"></td><td>p/point</td>
+							<td>Virgin Flying Club</td><td><input ng-change="updateVirgin();" class="form-control" type="number" step="any" min="0" ng-model="virgin.val" name="virgin" value="0.8"></td><td>p/point</td>
 						</tr>
 						<tr>
-							<td>Marriott Rewards</td><td><input class="form-control" type="text" name="marriott" value="0.55"></td><td>p/point</td>
+							<td>Marriott Rewards</td><td><input ng-change="updateMarriott();"class="form-control" type="number" step="any" min="0" ng-model="marriott.val" name="marriott" value="0.55"></td><td>p/point</td>
 						</tr>
 						<tr>
-							<td>IHG Rewards</td><td><input class="form-control" type="text" name="ihg" value="0.5"></td><td>p/point</td>
+							<td>IHG Rewards</td><td><input ng-change="updateIhg();" class="form-control" type="number" step="any" min="0" ng-model="ihg.val" name="ihg" value="0.5"></td><td>p/point</td>
 						</tr>
 						<tr>
-							<td>Hilton</td><td><input class="form-control" type="text" name="marriott" value="150"></td><td>&pound;/night</td>
+							<td>Hilton</td><td><input ng-change="updateHilton();" class="form-control" type="number" step="any" min="0" ng-model="hilton.val" name="marriott" value="150"></td><td>&pound;/night</td>
 						</tr>
 					</tbody>
 					</table>
 
 					<h3>Filter</h3>
 					<ul class="nav nav-sidebar">
-						<li class="active"><a href="#">All Cards <span class="sr-only">(current)</span></a></li>
-						<li><a href="#">American Express</a></li>
-						<li><a href="#">Avios</a></li>
-						<li><a href="#">No Fee</a></li>
-						<li><a href="#">No Spend</a></li>
+						<li><a href="" ng-click="expression = '!';">All Cards <span class="sr-only">(current)</span></a></li>
+						<li><a href="" ng-click="expression = 'membershipRewards';">American Express</a></li>
+						<li><a href="" ng-click="expression = 'avios';">Avios</a></li>
+						<li><a href="" ng-click="expression = 'noFee';">No Fee</a></li>
+						<li><a href="" ng-click="expression = 'noSpend';">No Spend</a></li>
 					</ul>		
 				</div>
 				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
 					<h2 class="sub-header">Recommended Cards</h2>
 					<div class="row placeholders">
-						<div class="col-xs-6 col-sm-3 placeholder" ng-repeat="card in cards | orderBy:'-cardBonus'" ng-if="$index < 4">
+						<div class="col-xs-6 col-sm-3 placeholder" ng-repeat="card in cards | orderBy:'-bonusValue'" ng-if="$index < 4">
 						<a href="{{ card.cardURL }}" title="{{ card.cardName }}"><img height="177" width="284" src="images/{{ card.imageName }}" class="img-responsive" alt="{{ card.cardName }}"></a>
 						<h4>{{ card.cardName }}</h4>
 						<span class="text-muted">{{ card.cardBonus }} {{ card.bonusCurrency }}</span>
@@ -102,7 +102,7 @@
 			              <tr>
 			                <th colspan="2"><a href="" ng-click="predicate = '-cardName'; reverse=!reverse">Credit Card</a></th>
 			                <th><a href="" ng-click="predicate = 'cardFee'; reverse=!reverse">Fee</a></th>
-			                <th><a href="" ng-click="predicate = '-cardBonus'; reverse=!reverse">Bonus</a></th>
+			                <th><a href="" ng-click="predicate = '-bonusValue'; reverse=!reverse">Bonus</a></th>
 			                <th><a href="" ng-click="predicate = 'minSpend'; reverse=!reverse">Minimum Spend</a></th>
 			                <th><a href="" ng-click="predicate = '-spendTimeLimit'; reverse=false">Time Limit</a></th>
 			                <th>Application Link</th>
@@ -110,7 +110,7 @@
 			              </tr>
 			            </thead>
 			            <tbody>
-			              <tr ng-repeat="card in cards | orderBy:predicate:reverse">
+			              <tr ng-repeat="card in cards | orderBy:predicate:reverse | filter:expression">
 			                <td><img height="100" width="160" src="images/{{ card.imageName }}" class="img-responsive" alt="{{ card.cardName }}"></td>
 			                <td>{{ card.cardName }}</td>
 			                <td>&pound;{{ card.cardFee }} </td>
