@@ -2,6 +2,17 @@ angular.module("creditcardApp", []);
 
 angular.module("creditcardApp").controller("creditcardCtrl", ['$scope', function($scope) {
 
+	// Define control array
+	$scope.control = {
+		avios: 1,
+		amex: 1,
+		spg: 1,
+		virgin: 0.8,
+		marriott: 0.55,
+		ihg: 0.5,
+		hilton: 150,
+	};
+
 	// Define credit card array
 	$scope.cards = [
 		{
@@ -185,7 +196,7 @@ angular.module("creditcardApp").controller("creditcardCtrl", ['$scope', function
     $scope.updateAvios = function( ) {
 
     	/* Get avios value */
-    	var val = $scope.avios.val;
+    	var val = $scope.control.avios;
 
     	/* Get card array */
         var cards = $scope.cards;
@@ -200,7 +211,7 @@ angular.module("creditcardApp").controller("creditcardCtrl", ['$scope', function
     $scope.updateAmex = function( ) {
 
     	/* Get amex value */
-    	var val = $scope.amex.val;
+    	var val = $scope.control.amex;
 
     	/* Get card array */
         var cards = $scope.cards;
@@ -215,7 +226,7 @@ angular.module("creditcardApp").controller("creditcardCtrl", ['$scope', function
     $scope.updateSpg = function( ) {
 
     	/* Get spg value */
-    	var val = $scope.spg.val;
+    	var val = $scope.control.spg;
 
     	/* Get card array */
         var cards = $scope.cards;
@@ -230,7 +241,7 @@ angular.module("creditcardApp").controller("creditcardCtrl", ['$scope', function
     $scope.updateVirgin = function( ) {
 
     	/* Get virgin value */
-    	var val = $scope.virgin.val;
+    	var val = $scope.control.virgin;
 
     	/* Get card array */
         var cards = $scope.cards;
@@ -245,7 +256,7 @@ angular.module("creditcardApp").controller("creditcardCtrl", ['$scope', function
     $scope.updateMarriott = function( ) {
 
     	/* Get marriott value */
-    	var val = $scope.marriott.val;
+    	var val = $scope.control.marriott;
 
     	/* Get card array */
         var cards = $scope.cards;
@@ -260,7 +271,7 @@ angular.module("creditcardApp").controller("creditcardCtrl", ['$scope', function
     $scope.updateIhg = function( ) {
 
     	/* Get ihg value */
-    	var val = $scope.ihg.val;
+    	var val = $scope.control.ihg;
 
     	/* Get card array */
         var cards = $scope.cards;
@@ -275,7 +286,7 @@ angular.module("creditcardApp").controller("creditcardCtrl", ['$scope', function
     $scope.updateHilton = function( ) {
 
     	/* Get hilton value */
-    	var val = $scope.hilton.val;
+    	var val = $scope.control.hilton;
 
     	/* Get card array */
         var cards = $scope.cards;
@@ -288,6 +299,6 @@ angular.module("creditcardApp").controller("creditcardCtrl", ['$scope', function
     };
 
     // Set default card sort criteria
-	$scope.predicate = "-bonusValueBonus";
+	$scope.predicate = "-bonusValue";
 
 }]);

@@ -71,7 +71,8 @@ table.control td {
 }
 
 table.control .form-control {
-  width: 53px;
+  padding: 6px;
+  width: 60px;
 }
 
 /*
