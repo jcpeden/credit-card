@@ -2,8 +2,8 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-3 sidebar">
-			<h3>Control</h3>
-			<p><em>Enter the value of a single point</em></p>
+			<h3>Value</h3>
+			<p><em>Enter the value of each system</em></p>
 			<table class="control">
 				<tbody>
 				<tr>
@@ -27,8 +27,28 @@
 				<tr>
 					<td>Hilton</td><td><input ng-change="updateHilton();" class="form-control" type="number" step="any" min="0" ng-model="control.hilton" name="hilton"></td><td>&pound;/night</td>
 				</tr>
+				<tr>
+					<td>Deduct card fee from bonus value</td>
+					<td><input type="radio" ng-change="feeValueDeduction();" ng-model="feeValueDeduction" value="1" checked> Yes</td>
+					<td><input type="radio" ng-change="feeValueDeduction();" ng-model="feeValueDeduction" value="0" > No</td>
+				</tr>
+				<tr>
+					<td>Hide cards with no signup bonus</td>
+					<td><input type="radio" ng-change="hideNoBonusCards();" ng-model="hideNoBonusCards" value="1"> Yes</td>
+					<td><input type="radio" ng-change="hideNoBonusCards();" ng-model="hideNoBonusCards" value="0" checked> No</td>
+				</tr>
 			</tbody>
 			</table>
+
+			<h3>Filters</h3>
+			<p><em>Select the links to show only cards from a particular category</em></p>
+			<ul>
+				<li>All cards</li>
+				<li>American Express only</li>
+				<li>Avios only</li>
+				<li>No fee</li>
+				<li>No minimum spend</li>
+			</ul>
 		</div>
 		<div class="col-sm-9 col-sm-offset-3 main">
 
