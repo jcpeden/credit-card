@@ -5,8 +5,8 @@ gulp.task('dev', function() {
   gulp.src('.')
     .pipe(webserver({
       livereload: true,
-      directoryListing: true,
-      open: 'index.html'
+      directoryListing: false,
+      open: '/'
     }));
 });
 

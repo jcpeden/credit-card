@@ -1,26 +1,41 @@
 angular.module("creditcardApp", ['ngRoute']);
 
 // configure our routes
-angular.module("creditcardApp").config(function($routeProvider) {
+angular.module("creditcardApp").config(function($routeProvider, $locationProvider) {
     $routeProvider
 
         // route for the home page
         .when('/', {
-            templateUrl : 'pages/home.html',
+            templateUrl : 'partials/home.html',
             controller  : 'mainController'
         })
 
         // route for the about page
         .when('/about', {
-            templateUrl : 'pages/about.html',
+            templateUrl : 'partials/page.html',
             controller  : 'aboutController'
         })
 
         // route for the contact page
         .when('/contact', {
-            templateUrl : 'pages/contact.html',
+            templateUrl : 'partials/page.html',
             controller  : 'contactController'
+        })
+
+        // route for the contact page
+        .when('/login', {
+            templateUrl : 'partials/login.html',
+            controller  : 'loginController'
+        })
+
+        // route for the contact page
+        .when('/admin', {
+            templateUrl : 'partials/admin.html',
+            controller  : 'adminController'
         });
+
+        // use the HTML5 History API
+        $locationProvider.html5Mode(true);
 });
 
 // configure mainController for home.html
@@ -42,192 +57,272 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		{
 			cardName: "American Express Preferred Rewards Gold",
 			cardBonus: 22000,
+			cardBonusVisual: 22000,
 			bonusValue: 220,
 			bonusCurrency: "amex",
-			bonusCurrencyNiceName: "Membership Reward points",
+			bonusCurrencyVisual: "Membership Reward points",
+			cardFeeSymbol: "£",
+			minSpendSymbol: "£",
 			cardFee: 125,
+			cardFeeVisual: "125",
 			imageName: "amex-gold.jpg", 
 			minSpend: 2000,
+			minSpendVisual: "2000",
 			spendTimeLimit: 90,
 			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:gold&journey=B&intlink=uk-amex-cardshop-goldcard-detail-applynow-main"
 		},
 		{
 			cardName: "American Express Platinum",
 			cardBonus: 35000,
+			cardBonusVisual: 35000,
 			bonusValue: 350,
 			bonusCurrency: "amex",
-			bonusCurrencyNiceName: "Membership Reward points",
+			bonusCurrencyVisual: "Membership Reward points",
+			cardFeeSymbol: "£",
+			minSpendSymbol: "£",
 			cardFee: 450,
+			cardFeeVisual: "450",
 			imageName: "amex-platinum.jpg", 
 			minSpend: 2000,
+			minSpendVisual: "2000",
 			spendTimeLimit: 90,
 			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:platinum_charge&journey=B&intlink=uk-amex-cardshop-platinumcard-detail-applynow-main"
 		},
 		{
 			cardName: "British Airways American Express",
 			cardBonus: 3000,
+			cardBonusVisual: 3000,
 			bonusValue: 30,
 			bonusCurrency: "avios",
-			bonusCurrencyNiceName: "Avios",
+			bonusCurrencyVisual: "Avios",
+			cardFeeSymbol: "",
+			minSpendSymbol: "£",
 			cardFee: 0,
+			cardFeeVisual: "-",
 			imageName: "ba.jpg", 
 			minSpend: 500,
+			minSpendVisual: "500",
 			spendTimeLimit: 90,
 			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:triCredit&journey=B&intlink=uk-amex-cardshop-britishairwaysamericanexpresscreditcard-detail-applynow-main"
 		},
 		{
 			cardName: "British Airways American Express Premium Plus",
 			cardBonus: 18000,
+			cardBonusVisual: 18000,
 			bonusValue: 180,
 			bonusCurrency: "avios",
-			bonusCurrencyNiceName: "Avios",
+			bonusCurrencyVisual: "Avios",
+			cardFeeSymbol: "£",
+			minSpendSymbol: "£",
 			cardFee: 125,
+			cardFeeVisual: "125",
 			imageName: "ba-premium-plus.jpg", 
 			minSpend: 2000,
+			minSpendVisual: "2000",
 			spendTimeLimit: 90,
 			cardURL: "https://www252.americanexpress.com/inga3/uk/pers/begin.do?perform=IntlEapp:UK:triPremiumPlus&intlink=uk-amex-cardshop-BritishAirwaysPremiumPlus-detail-applynow-main"
 		},
 		{
 			cardName: "Lloyds Avios Rewards American Express & MasterCard",
 			cardBonus: 0,
+			cardBonusVisual: "",
 			bonusValue: 0,
 			bonusCurrency: "avios",
-			bonusCurrencyNiceName: "Avios",
+			bonusCurrencyVisual: "-",
+			cardFeeSymbol: "£",
+			minSpendSymbol: "",
 			cardFee: 24,
+			cardFeeVisual: "24",
 			imageName: "lloyds-rewards.jpg", 
 			minSpend: 0,
+			minSpendVisual: "-",
 			spendTimeLimit: 0,
 			cardURL: "https://apply.lloydsbank.co.uk/personal/a/apply_credit_card/PS_LAvios_HP2812"
 		},
 		{
 			cardName: "Lloyds Premier Avios Rewards American Express & MasterCard",
 			cardBonus: 0,
+			cardBonusVisual: "",
 			bonusValue: 0,
 			bonusCurrency: "avios",
-			bonusCurrencyNiceName: "Avios",
+			bonusCurrencyVisual: "-",
+			cardFeeSymbol: "£",
+			minSpendSymbol: "",
 			cardFee: 140,
+			cardFeeVisual: "140",
 			imageName: "lloyds-premier.jpg", 
 			minSpend: 0,
+			minSpendVisual: "-",
 			spendTimeLimit: 0,
 			cardURL: "https://apply.lloydsbank.co.uk/personal/a/apply_credit_card/PS_LAviosPremier_HP2812"
 		},
 		{
 			cardName: "Lloyds Choice Rewards American Express & MasterCard",
 			cardBonus: 0,
+			cardBonusVisual: "",
 			bonusValue: 0,
 			bonusCurrency: "avios",
-			bonusCurrencyNiceName: "Avios",
+			bonusCurrencyVisual: "-",
+			cardFeeSymbol: "£",
+			minSpendSymbol: "",
 			cardFee: 24,
+			cardFeeVisual: "24",
 			imageName: "lloyds-choice.jpg", 
 			minSpend: 0,
+			minSpendVisual: "-",
 			spendTimeLimit: 0,
 			cardURL: "https://apply.lloydsbank.co.uk/personal/a/apply_credit_card/PS_Lloyds_Choice2812"
 		},
 		{
 			cardName: "TSB Avios American Express & MasterCard",
 			cardBonus: 0,
+			cardBonusVisual: "",
 			bonusValue: 0,
 			bonusCurrency: "avios",
-			bonusCurrencyNiceName: "Avios",
+			bonusCurrencyVisual: "-",
+			cardFeeSymbol: "",
+			minSpendSymbol: "",
 			cardFee: 0,
+			cardFeeVisual: "-",
 			imageName: "tsb.jpg", 
 			minSpend: 0,
+			minSpendVisual: "-",
 			spendTimeLimit: 0,
 			cardURL: "https://apply.tsb.co.uk/personal/a/apply_credit_card/PS_TSBDuoAvios"
 		},
 		{
 			cardName: "TSB Premier Avios American Express & MasterCard",
 			cardBonus: 0,
+			cardBonusVisual: "",
 			bonusValue: 0,
 			bonusCurrency: "avios",
-			bonusCurrencyNiceName: "Avios",
+			bonusCurrencyVisual: "-",
+			cardFeeSymbol: "",
+			minSpendSymbol: "",
 			cardFee: 0,
+			cardFeeVisual: "-",
 			imageName: "tsb-premier.jpg", 
 			minSpend: 0,
+			minSpendVisual: "-",
 			spendTimeLimit: 0,
 			cardURL: "https://apply.tsb.co.uk/personal/a/apply_credit_card/PS_TSBPremierDuo"
 		},
 		{
 			cardName: "Virgin Atlantic White American Express & Visa",
 			cardBonus: 10000,
+			cardBonusVisual: 10000,
 			bonusValue: 80,
 			bonusCurrency: "virgin",
-			bonusCurrencyNiceName: "Virgin Flying Club miles",
+			bonusCurrencyVisual: "Virgin Flying Club miles",
+			cardFeeSymbol: "",
+			minSpendSymbol: "£",
 			cardFee: 0,
+			cardFeeVisual: "-",
 			imageName: "virgin-white.jpg", 
 			minSpend: 2000,
+			minSpendVisual: "2000",
 			spendTimeLimit: 90,
 			cardURL: "http://www.virgin-atlantic.com/gb/en/flying-club/credit-card/bonus-white-card.html"
 		},
 		{
 			cardName: "Virgin Atlantic Black American Express & Visa",
 			cardBonus: 25000,
+			cardBonusVisual: 25000,
 			bonusValue: 200,
 			bonusCurrency: "virgin",
-			bonusCurrencyNiceName: "Virgin Flying Club miles",
+			bonusCurrencyVisual: "Virgin Flying Club miles",
+			cardFeeSymbol: "£",
+			minSpendSymbol: "£",
 			cardFee: 14,
+			cardFeeVisual: "14",
 			imageName: "virgin-black.jpg", 
 			minSpend: 2000,
+			minSpendVisual: "2000",
 			spendTimeLimit: 90,
 			cardURL: "http://www.virgin-atlantic.com/gb/en/flying-club/credit-card/bonus-black-card.html"
 		},
 		{
 			cardName: "Hilton HHonors Platinum Visa",
 			cardBonus: 1,
+			cardBonusVisual: 1,
 			bonusValue: 150,
 			bonusCurrency: "hilton",
-			bonusCurrencyNiceName: "Night in a Hilton property*",
+			bonusCurrencyVisual: "Night in a Hilton property*",
+			cardFeeSymbol: "",
+			minSpendSymbol: "£",
 			cardFee: 0,
+			cardFeeVisual: "-",
 			imageName: "hilton.jpg", 
 			minSpend: 750,
+			minSpendVisual: "750",
 			spendTimeLimit: 90,
 			cardURL: "http://www.barclaycard.co.uk/personal/credit-cards/hilton"
 		},
 		{
 			cardName: "IHG Rewards Club Visa",
 			cardBonus: 30000,
+			cardBonusVisual: 30000,
 			bonusValue: 150,
 			bonusCurrency: "ihg",
-			bonusCurrencyNiceName: "IHG Rewards Club points",
+			bonusCurrencyVisual: "IHG Rewards Club points",
+			cardFeeSymbol: "",
+			minSpendSymbol: "£",
 			cardFee: 0,
+			cardFeeVisual: "-",
 			imageName: "ihg.jpg", 
 			minSpend: 1,
+			minSpendVisual: "1",
 			spendTimeLimit: 90,
 			cardURL: "http://www.barclaycard.co.uk/personal/credit-cards/ihg"
 		},
 		{
 			cardName: "IHG Rewards Club Premium Visa",
 			cardBonus: 60000,
+			cardBonusVisual: 60000,
 			bonusValue: 300,
 			bonusCurrency: "ihg",
-			bonusCurrencyNiceName: "IHG Rewards Club points",
+			bonusCurrencyVisual: "IHG Rewards Club points",
+			cardFeeSymbol: "£",
+			minSpendSymbol: "£",
 			cardFee: 99,
+			cardFeeVisual: "99",
 			imageName: "ihg-premier.jpg", 
 			minSpend: 1,
+			minSpendVisual: "1",
 			spendTimeLimit: 90,
 			cardURL: "http://www.barclaycard.co.uk/personal/credit-cards/ihg-premium"
 		},
 		{
 			cardName: "Marriott Rewards MasterCard",
 			cardBonus: 10000,
+			cardBonusVisual: 10000,
 			bonusValue: 55,
 			bonusCurrency: "marriott",
-			bonusCurrencyNiceName: "Marriott Rewards points",
+			bonusCurrencyVisual: "Marriott Rewards points",
+			cardFeeSymbol: "£",
+			minSpendSymbol: "£",
 			cardFee: 125,
+			cardFeeVisual: "125",
 			imageName: "marriott.jpg", 
 			minSpend: 200,
+			minSpendVisual: "200",
 			spendTimeLimit: 180,
 			cardURL: "https://apply.creation.co.uk/microsites/marriott/?termsAndConditionsCode=MC5307&MC=29990017&operatorCode=WebMC&responseCode=MRRHP4"
 		},
 		{
 			cardName: "American Express Preferred Rewards Gold",
 			cardBonus: 10000,
+			cardBonusVisual: 10000,
 			bonusValue: 100,
 			bonusCurrency: "spg",
-			bonusCurrencyNiceName: "SPG points",
+			bonusCurrencyVisual: "SPG points",
+			cardFeeSymbol: "£",
+			minSpendSymbol: "£",
 			cardFee: 75,
+			cardFeeVisual: "75",
 			imageName: "spg.jpg", 
 			minSpend: 1000,
+			minSpendVisual: "1000",
 			spendTimeLimit: 90,
 			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:triCredit&journey=B&intlink=uk-amex-cardshop-britishairwaysamericanexpresscreditcard-detail-applynow-main"
 		}
@@ -342,3 +437,30 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 	$scope.predicate = "-bonusValue";
 
 }]);
+
+angular.module("creditcardApp").controller('aboutController', function($scope) {
+    $scope.title = 'About';
+    $scope.paragraphs = [
+    	'My name is John Peden and I\'m the creator of this single page application. Credit Card Airline points was originally conceived as a way for me to generate referals to the credit cards you see on the homepage. Visitors would sign up, I\'d get a comission that was paid in points.',
+    	'While that was the original plan, the reality turned out to be that credit card companies are notoriously difficult to build that sort of relationship with. In the end, I decided to use the application as a training ground for Angular and front end web development in general. I came from a WordPress background originally and have loved getting to grips with the fantastic power and simplicity of Angular JS.'
+    ];
+    $scope.url = 'http://www.johncpeden.com';
+    $scope.linkAnchor = 'Learn More';
+});
+
+angular.module("creditcardApp").controller('contactController', function($scope) {
+    $scope.title = 'Contact';
+     $scope.paragraphs = [
+    	'Want to get in touch about me, my work or this application? Just drop me an email by clicking the button below.'
+    ];
+    $scope.url = 'mailto:john@tweakdigital.co.uk';
+    $scope.linkAnchor = 'Email me';
+});
+
+angular.module("creditcardApp").controller('loginController', function($scope) {
+    $scope.title = 'Login';
+});
+
+angular.module("creditcardApp").controller('adminController', function($scope) {
+    $scope.title = 'Admin';
+});
