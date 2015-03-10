@@ -1,6 +1,30 @@
-angular.module("creditcardApp", []);
+angular.module("creditcardApp", ['ngRoute']);
 
-angular.module("creditcardApp").controller("creditcardCtrl", ['$scope', function($scope) {
+// configure our routes
+angular.module("creditcardApp").config(function($routeProvider) {
+    $routeProvider
+
+        // route for the home page
+        .when('/', {
+            templateUrl : 'pages/home.html',
+            controller  : 'mainController'
+        })
+
+        // route for the about page
+        .when('/about', {
+            templateUrl : 'pages/about.html',
+            controller  : 'aboutController'
+        })
+
+        // route for the contact page
+        .when('/contact', {
+            templateUrl : 'pages/contact.html',
+            controller  : 'contactController'
+        });
+});
+
+// configure mainController for home.html
+angular.module("creditcardApp").controller("mainController", ['$scope', function($scope) {
 
 	// Define control array
 	$scope.control = {
