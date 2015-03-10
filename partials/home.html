@@ -37,7 +37,7 @@
 				<div class="col-xs-6 col-sm-3 placeholder" ng-repeat="card in cards | orderBy:'-bonusValue'" ng-if="$index < 4">
 				<a href="{{ card.cardURL }}" title="{{ card.cardName }}"><img height="177" width="284" src="images/{{ card.imageName }}" class="img-responsive" alt="{{ card.cardName }}"></a>
 				<h4>{{ card.cardName }}</h4>
-				<span class="text-muted">{{ card.cardBonus }} {{ card.bonusCurrencyNiceName }}</span>
+				<span class="text-muted">{{ card.cardBonus }} {{ card.bonusCurrencyVisual }}</span>
 				</div>
 			</div>
 
@@ -62,7 +62,7 @@
 	                <td>{{ card.cardFeeSymbol }}{{ card.cardFeeVisual }}</td>
 	                <td>{{ card.cardBonusVisual }} {{ card.bonusCurrencyVisual }}</td>
 	                <td>{{ card.minSpendSymbol }}{{ card.minSpendVisual }}</td>
-	                <td>{{ card.spendTimeLimit }} days</td>
+	                <td>{{ card.spendTimeLimitVisual }} {{ card.spendTimeLimitDays }}</td>
 	                <td><a href="{{ card.cardURL }}" title="{{ card.cardName }}">Apply now</a></td>
 	              </tr>
 	            </tbody>

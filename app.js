@@ -69,6 +69,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 2000,
 			minSpendVisual: "2000",
 			spendTimeLimit: 90,
+			spendTimeLimitVisual: "90",
+			spendTimeLimitDays: "days",
 			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:gold&journey=B&intlink=uk-amex-cardshop-goldcard-detail-applynow-main"
 		},
 		{
@@ -86,6 +88,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 2000,
 			minSpendVisual: "2000",
 			spendTimeLimit: 90,
+			spendTimeLimitVisual: "90",
+			spendTimeLimitDays: "days",
 			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:platinum_charge&journey=B&intlink=uk-amex-cardshop-platinumcard-detail-applynow-main"
 		},
 		{
@@ -103,6 +107,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 500,
 			minSpendVisual: "500",
 			spendTimeLimit: 90,
+			spendTimeLimitVisual: "90",
+			spendTimeLimitDays: "days",
 			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:triCredit&journey=B&intlink=uk-amex-cardshop-britishairwaysamericanexpresscreditcard-detail-applynow-main"
 		},
 		{
@@ -120,6 +126,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 2000,
 			minSpendVisual: "2000",
 			spendTimeLimit: 90,
+			spendTimeLimitVisual: "90",
+			spendTimeLimitDays: "days",
 			cardURL: "https://www252.americanexpress.com/inga3/uk/pers/begin.do?perform=IntlEapp:UK:triPremiumPlus&intlink=uk-amex-cardshop-BritishAirwaysPremiumPlus-detail-applynow-main"
 		},
 		{
@@ -137,6 +145,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 0,
 			minSpendVisual: "-",
 			spendTimeLimit: 0,
+			spendTimeLimitVisual: "-",
+			spendTimeLimitDays: "",
 			cardURL: "https://apply.lloydsbank.co.uk/personal/a/apply_credit_card/PS_LAvios_HP2812"
 		},
 		{
@@ -154,6 +164,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 0,
 			minSpendVisual: "-",
 			spendTimeLimit: 0,
+			spendTimeLimitVisual: "-",
+			spendTimeLimitDays: "",
 			cardURL: "https://apply.lloydsbank.co.uk/personal/a/apply_credit_card/PS_LAviosPremier_HP2812"
 		},
 		{
@@ -171,6 +183,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 0,
 			minSpendVisual: "-",
 			spendTimeLimit: 0,
+			spendTimeLimitVisual: "-",
+			spendTimeLimitDays: "",
 			cardURL: "https://apply.lloydsbank.co.uk/personal/a/apply_credit_card/PS_Lloyds_Choice2812"
 		},
 		{
@@ -188,6 +202,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 0,
 			minSpendVisual: "-",
 			spendTimeLimit: 0,
+			spendTimeLimitVisual: "-",
+			spendTimeLimitDays: "",
 			cardURL: "https://apply.tsb.co.uk/personal/a/apply_credit_card/PS_TSBDuoAvios"
 		},
 		{
@@ -205,6 +221,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 0,
 			minSpendVisual: "-",
 			spendTimeLimit: 0,
+			spendTimeLimitVisual: "-",
+			spendTimeLimitDays: "",
 			cardURL: "https://apply.tsb.co.uk/personal/a/apply_credit_card/PS_TSBPremierDuo"
 		},
 		{
@@ -222,6 +240,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 2000,
 			minSpendVisual: "2000",
 			spendTimeLimit: 90,
+			spendTimeLimitVisual: "90",
+			spendTimeLimitDays: "days",
 			cardURL: "http://www.virgin-atlantic.com/gb/en/flying-club/credit-card/bonus-white-card.html"
 		},
 		{
@@ -239,6 +259,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 2000,
 			minSpendVisual: "2000",
 			spendTimeLimit: 90,
+			spendTimeLimitVisual: "90",
+			spendTimeLimitDays: "days",
 			cardURL: "http://www.virgin-atlantic.com/gb/en/flying-club/credit-card/bonus-black-card.html"
 		},
 		{
@@ -256,6 +278,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 750,
 			minSpendVisual: "750",
 			spendTimeLimit: 90,
+			spendTimeLimitVisual: "90",
+			spendTimeLimitDays: "days",
 			cardURL: "http://www.barclaycard.co.uk/personal/credit-cards/hilton"
 		},
 		{
@@ -273,6 +297,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 1,
 			minSpendVisual: "1",
 			spendTimeLimit: 90,
+			spendTimeLimitVisual: "90",
+			spendTimeLimitDays: "days",
 			cardURL: "http://www.barclaycard.co.uk/personal/credit-cards/ihg"
 		},
 		{
@@ -290,6 +316,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 1,
 			minSpendVisual: "1",
 			spendTimeLimit: 90,
+			spendTimeLimitVisual: "90",
+			spendTimeLimitDays: "days",
 			cardURL: "http://www.barclaycard.co.uk/personal/credit-cards/ihg-premium"
 		},
 		{
@@ -307,6 +335,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 200,
 			minSpendVisual: "200",
 			spendTimeLimit: 180,
+			spendTimeLimitVisual: "180",
+			spendTimeLimitDays: "days",
 			cardURL: "https://apply.creation.co.uk/microsites/marriott/?termsAndConditionsCode=MC5307&MC=29990017&operatorCode=WebMC&responseCode=MRRHP4"
 		},
 		{
@@ -324,6 +354,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpend: 1000,
 			minSpendVisual: "1000",
 			spendTimeLimit: 90,
+			spendTimeLimitVisual: "90",
+			spendTimeLimitDays: "days",
 			cardURL: "https://www252.americanexpress.com/inga/uk/pers/begin.do?perform=IntlEapp:UK:triCredit&journey=B&intlink=uk-amex-cardshop-britishairwaysamericanexpresscreditcard-detail-applynow-main"
 		}
 	];
