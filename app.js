@@ -465,6 +465,18 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		});
     };
 
+    // feeValueDeduction
+
+    // hideNoBonusCards  
+
+    // filter cards
+    $scope.cardFilter = function( ) {
+    	if ($scope.selectedLink === 'amex' ) {
+    		
+    	}
+	};
+
+
     // Set default card sort criteria
 	$scope.predicate = "-bonusValue";
 
