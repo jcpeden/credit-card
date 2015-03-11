@@ -29,13 +29,13 @@
 				</tr>
 				<tr>
 					<td>Deduct card fee from bonus value</td>
-					<td><input type="radio" ng-change="feeValueDeduction();" ng-model="feeValueDeduction" value="1" checked> Yes</td>
-					<td><input type="radio" ng-change="feeValueDeduction();" ng-model="feeValueDeduction" value="0" > No</td>
+					<td><input type="radio" ng-change="feeValueDeduction();" ng-model="control.deductFee" value="1"> Yes</td>
+					<td><input type="radio" ng-change="feeValueDeduction();" ng-model="control.deductFee" value="0" > No</td>
 				</tr>
 				<tr>
 					<td>Hide cards with no signup bonus</td>
-					<td><input type="radio" ng-change="hideNoBonusCards();" ng-model="hideNoBonusCards" value="1"> Yes</td>
-					<td><input type="radio" ng-change="hideNoBonusCards();" ng-model="hideNoBonusCards" value="0" checked> No</td>
+					<td><input type="radio" ng-change="hideNoBonusCards();" ng-model="control.hideNoBonusCards" value="1"> Yes</td>
+					<td><input type="radio" ng-change="hideNoBonusCards();" ng-model="control.hideNoBonusCards" value="0"> No</td>
 				</tr>
 			</tbody>
 			</table>

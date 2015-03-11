@@ -50,6 +50,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		marriott: 0.55,
 		ihg: 0.5,
 		hilton: 150,
+		deductFee: 1,
+		hideNoBonusCards: 1,
 	};
 
 	// Define credit card array
