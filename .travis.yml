@@ -7,6 +7,6 @@ deploy:
   password:
     secure: XmBXRgDBFeteDfdSL/ixpISQRvhl881S4YmN/Al8+aXpDsOvXEml0eg0TneT0lBubAJih2NnB81Szlb9npzjD/ipODHOnCLBO2+9BSUJUqcPX6bGZY7/VCMwDnlPKdQLDX0fPyipqpjNBQBqkzLV7dZNSAvgWGLchsPNI7PWzUI=
   app: creditcard
-  domain: creditcard-ccairlinepoints.rhcloud.com
+  domain: ccairlinepoints
   on:
     repo: jcpeden/creditcardairlinepoints
