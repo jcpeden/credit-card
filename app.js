@@ -362,6 +362,44 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		}
 	];
 
+	$scope.filters = [
+		{
+            'filterId': 1,
+            'anchor': 'All cards',
+            'property': '',
+            'filter': ''
+        },
+        {
+            'filterId': 2,
+            'anchor': 'American Express cards',
+            'property': 'bonusCurrency',
+            'filter': 'amex'
+        },
+		{
+			'filterId': 3,
+			'anchor': 'Avios cards',
+			'property': 'bonusCurrency',
+			'filter': 'avios'
+		},
+		{
+			'filterId': 4,
+			'anchor': 'No fee',
+			'property': 'cardFee',
+			'filter': 0
+		},
+		{
+			'filterId': 5,
+			'anchor': 'No minimum spend',
+			'property': 'minSpend',
+			'filter': 0
+		}
+	];
+
+	$scope.selectedIndex = 1; /* first one set active by default */
+	$scope.selectFilter = function(i) {
+	  $scope.selectedIndex=i;
+	};
+
     $scope.updateAvios = function( ) {
 
     	/* Get avios value */

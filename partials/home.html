@@ -43,12 +43,8 @@
 			<h3>Filters</h3>
 			<p><em>Select the links to show only cards from a particular category</em></p>
 			<ul class="nav nav-sidebar">
-	            <li class="active"><a href="#" ng-click="property = 'bonusCurrency'; property = true;">All cards <span class="sr-only">(current)</span></a></li>
-	            <li><a href="#" ng-click="property = 'bonusCurrency'; property = 'amex';">American Express only</a></li>
-	            <li><a href="#" ng-click="property = 'bonusCurrency'; property = 'avios';">Avios only</a></li>
-	            <li><a href="#" ng-click="property = 'cardFee'; property = 0;">No fee</a></li>
-	            <li><a href="#" ng-click="property = 'minSpend'; property = 0;">No minimum spend</a></li>
-	         </ul>
+				<li ng-repeat="filter in filters" ng-click="selectFilter($index)" ng-class="{active: $index===selectedIndex}"><a href="#"></span>{{ filter.anchor }}</a></li>
+	        </ul>
 		</div>
 		<div class="col-sm-9 col-sm-offset-3 main">
 
