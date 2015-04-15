@@ -27,16 +27,6 @@
 				<tr>
 					<td>Hilton</td><td><input ng-change="updateHilton();" class="form-control" type="number" step="any" min="0" ng-model="control.hilton" name="hilton"></td><td>&pound;/night</td>
 				</tr>
-				<tr>
-					<td>Deduct card fee from bonus value</td>
-					<td><input type="radio" ng-change="feeValueDeduction();" ng-model="control.deductFee" value="1"> Yes</td>
-					<td><input type="radio" ng-change="feeValueDeduction();" ng-model="control.deductFee" value="0" > No</td>
-				</tr>
-				<tr>
-					<td>Hide cards with no signup bonus</td>
-					<td><input type="radio" ng-change="hideNoBonusCards();" ng-model="control.hideNoBonusCards" value="1"> Yes</td>
-					<td><input type="radio" ng-change="hideNoBonusCards();" ng-model="control.hideNoBonusCards" value="0"> No</td>
-				</tr>
 			</tbody>
 			</table>
 
