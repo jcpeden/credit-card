@@ -58,6 +58,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 	$scope.cards = [
 		{
 			cardName: "American Express Preferred Rewards Gold",
+			cardStatus: 1,
 			cardBonus: 22000,
 			cardBonusVisual: 22000,
 			bonusValue: 220,
@@ -77,6 +78,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "American Express Platinum",
+			cardStatus: 1,
 			cardBonus: 35000,
 			cardBonusVisual: 35000,
 			bonusValue: 350,
@@ -96,6 +98,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "British Airways American Express",
+			cardStatus: 1,
 			cardBonus: 3000,
 			cardBonusVisual: 3000,
 			bonusValue: 30,
@@ -115,6 +118,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "British Airways American Express Premium Plus",
+			cardStatus: 1,
 			cardBonus: 18000,
 			cardBonusVisual: 18000,
 			bonusValue: 180,
@@ -134,6 +138,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "Lloyds Avios Rewards American Express & MasterCard",
+			cardStatus: 1,
 			cardBonus: 0,
 			cardBonusVisual: "",
 			bonusValue: 0,
@@ -153,6 +158,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "Lloyds Premier Avios Rewards American Express & MasterCard",
+			cardStatus: 1,
 			cardBonus: 0,
 			cardBonusVisual: "",
 			bonusValue: 0,
@@ -172,6 +178,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "Lloyds Choice Rewards American Express & MasterCard",
+			cardStatus: 1,
 			cardBonus: 0,
 			cardBonusVisual: "",
 			bonusValue: 0,
@@ -191,6 +198,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "TSB Avios American Express & MasterCard",
+			cardStatus: 1,
 			cardBonus: 0,
 			cardBonusVisual: "",
 			bonusValue: 0,
@@ -210,6 +218,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "TSB Premier Avios American Express & MasterCard",
+			cardStatus: 1,
 			cardBonus: 0,
 			cardBonusVisual: "",
 			bonusValue: 0,
@@ -229,6 +238,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "Virgin Atlantic White American Express & Visa",
+			cardStatus: 1,
 			cardBonus: 10000,
 			cardBonusVisual: 10000,
 			bonusValue: 80,
@@ -248,6 +258,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "Virgin Atlantic Black American Express & Visa",
+			cardStatus: 1,
 			cardBonus: 25000,
 			cardBonusVisual: 25000,
 			bonusValue: 200,
@@ -267,6 +278,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "Hilton HHonors Platinum Visa",
+			cardStatus: 1,
 			cardBonus: 1,
 			cardBonusVisual: 1,
 			bonusValue: 150,
@@ -286,6 +298,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "IHG Rewards Club Visa",
+			cardStatus: 1,
 			cardBonus: 30000,
 			cardBonusVisual: 30000,
 			bonusValue: 150,
@@ -305,6 +318,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "IHG Rewards Club Premium Visa",
+			cardStatus: 1,
 			cardBonus: 60000,
 			cardBonusVisual: 60000,
 			bonusValue: 300,
@@ -324,6 +338,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "Marriott Rewards MasterCard",
+			cardStatus: 1,
 			cardBonus: 10000,
 			cardBonusVisual: 10000,
 			bonusValue: 55,
@@ -343,6 +358,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		},
 		{
 			cardName: "American Express Preferred Rewards Gold",
+			cardStatus: 1,
 			cardBonus: 10000,
 			cardBonusVisual: 10000,
 			bonusValue: 100,
@@ -365,41 +381,93 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 	$scope.filters = [
 		{
             'filterId': 0,
-            'anchor': 'All cards',
-            'property': '',
-            'filter': ''
+            'anchor': 'All cards'
         },
         {
             'filterId': 1,
-            'anchor': 'American Express cards',
-            'property': 'bonusCurrency',
-            'filter': 'amex'
+            'anchor': 'American Express cards'
         },
 		{
 			'filterId': 2,
-			'anchor': 'Avios cards',
-			'property': 'bonusCurrency',
-			'filter': 'avios'
-		}/*,
+			'anchor': 'Avios cards'
+		},
 		{
 			'filterId': 3,
-			'anchor': 'No fee',
-			'property': 'cardFee',
-			'filter': 0
+			'anchor': 'No fee'
 		},
 		{
 			'filterId': 4,
-			'anchor': 'No minimum spend',
-			'property': 'minSpend',
-			'filter': 0
-		}*/
+			'anchor': 'No minimum spend'
+		}
 	];
 
-	$scope.selectedIndex = 0; /* first one set active by default */
+	/* Set first filter link to default */
+	$scope.selectedIndex = 0; 
 	
-	$scope.selectFilter = function(i) {
+	/* Update active class for filter links on click */
+	$scope.selectFilter = function(i) { 
 		$scope.selectedIndex=i;
 	};
+
+	$scope.updateStatus = function(i){
+
+	    var cards = $scope.cards;
+
+	    switch(i) {
+		    case 1:
+		        console.log('amex only');
+				angular.forEach(cards, function(card) {
+					if(card.bonusCurrency == 'amex' ) {
+						card.cardStatus = 1;
+					} else {
+						card.cardStatus = 0;
+					}
+				});
+		        break;
+		    case 2:
+		        console.log('avios only');
+		        angular.forEach(cards, function(card) {
+					if(card.bonusCurrency == 'avios' ) {
+						card.cardStatus = 1;
+					} else {
+						card.cardStatus = 0;
+					}
+				});
+		        break;
+		    case 3:
+		        console.log('no fee');
+		        angular.forEach(cards, function(card) {
+					if(card.cardFee == 0 ) {
+						card.cardStatus = 1;
+					} else {
+						card.cardStatus = 0;
+					}
+				});
+		        break;
+		    case 4:
+		        console.log('no min spend');
+		        angular.forEach(cards, function(card) {
+					if(card.minSpend == 0 ) {
+						card.cardStatus = 1;
+					} else {
+						card.cardStatus = 0;
+					}
+				});
+		        break;
+		    default:
+		        console.log('reset all');
+		        angular.forEach(cards, function(card) {
+		        	card.cardStatus = 1;
+				});
+		}
+	}
+
+	$scope.cardFilter = function(cardStatus){
+	    if(cardStatus === 1){
+	       return true;
+	    }
+	    return false;
+	}
 
     $scope.updateAvios = function( ) {
 
@@ -505,18 +573,6 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 				card.bonusValue = val * card.cardBonus * 100;
 		});
     };
-
-    // feeValueDeduction
-
-    // hideNoBonusCards  
-
-    // filter cards
-    $scope.cardFilter = function( ) {
-    	if ($scope.selectedLink === 'amex' ) {
-    		
-    	}
-	};
-
 
     // Set default card sort criteria
 	$scope.predicate = "-bonusValue";

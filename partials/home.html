@@ -43,7 +43,7 @@
 			<h3>Filters</h3>
 			<p><em>Select the links to show only cards from a particular category</em></p>
 			<ul class="nav nav-sidebar">
-				<li ng-repeat="filter in filters" ng-click="selectFilter($index)" ng-class="{active: $index===selectedIndex}"><a href="#"></span>{{ filter.anchor }}</a></li>
+				<li ng-repeat="filter in filters" ng-click="selectFilter($index);updateStatus(filter.filterId)" ng-class="{active: $index===selectedIndex}"><a href="#">{{ filter.anchor }}</a></li>
 	        </ul>
 		</div>
 		<div class="col-sm-9 col-sm-offset-3 main">
@@ -56,6 +56,8 @@
 				<span class="text-muted">{{ card.cardBonus }} {{ card.bonusCurrencyVisual }}</span>
 				</div>
 			</div>
+
+
 
 			<h2 class="sub-header">Compare Cards</h2>
 	        <div class="table-responsive">
@@ -72,7 +74,7 @@
 	              </tr>
 	            </thead>
 	            <tbody>
-	              <tr ng-repeat="card in cards | orderBy:predicate:reverse">
+	              <tr ng-repeat="card in cards | orderBy:predicate:reverse" ng-if="cardFilter(card.cardStatus)">
 	                <td><img height="100" width="160" src="images/{{ card.imageName }}" class="img-responsive" alt="{{ card.cardName }}"></td>
 	                <td>{{ card.cardName }}</td>
 	                <td>{{ card.cardFeeSymbol }}{{ card.cardFeeVisual }}</td>
