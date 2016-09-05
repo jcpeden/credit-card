@@ -1,20 +1,22 @@
 {
-  "name": "credit-card-comparison",
+  "name": "Card Rank",
   "version": "1.0.0",
   "description": "An application to compare airline reward point bonuses from UK credit cards",
   "keywords": [
-    "OpenShift",
     "Node.js",
-    "application",
-    "openshift"
+    "application"
   ],
   "author": "John Peden <john@tweakdigital.co.uk>",
    "author": {
     "name": "John Peden",
-    "email": "mail@johncpeden.com",
-    "url": "http://www.johncpeden.com/"
+    "email": "john@tweakdigital.co.uk",
+    "url": "http://www.tweakdigital.co.uk/"
   },
-  "homepage": "http://www.johncpeden.com/",
+  "engines": {
+    "node": "5.1.0",
+    "npm": "3.4.1"
+  },
+  "homepage": "http://www.cardrank.co.uk/",
   "repository": {
     "type": "git",
     "url": "https://bitbucket.org/jcpeden/angular"
