@@ -68,7 +68,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "£",
 			cardFee: 125,
 			cardFeeVisual: "125",
-			imageName: "amex-gold.jpg", 
+			imageName: "amex-gold.jpg",
 			minSpend: 2000,
 			minSpendVisual: "2000",
 			spendTimeLimit: 90,
@@ -88,7 +88,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "£",
 			cardFee: 450,
 			cardFeeVisual: "450",
-			imageName: "amex-platinum.jpg", 
+			imageName: "amex-platinum.jpg",
 			minSpend: 2000,
 			minSpendVisual: "2000",
 			spendTimeLimit: 90,
@@ -108,7 +108,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "£",
 			cardFee: 0,
 			cardFeeVisual: "-",
-			imageName: "ba.jpg", 
+			imageName: "ba.jpg",
 			minSpend: 500,
 			minSpendVisual: "500",
 			spendTimeLimit: 90,
@@ -128,7 +128,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "£",
 			cardFee: 125,
 			cardFeeVisual: "125",
-			imageName: "ba-premium-plus.jpg", 
+			imageName: "ba-premium-plus.jpg",
 			minSpend: 2000,
 			minSpendVisual: "2000",
 			spendTimeLimit: 90,
@@ -148,7 +148,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "",
 			cardFee: 24,
 			cardFeeVisual: "24",
-			imageName: "lloyds-rewards.jpg", 
+			imageName: "lloyds-rewards.jpg",
 			minSpend: 0,
 			minSpendVisual: "-",
 			spendTimeLimit: 0,
@@ -168,7 +168,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "",
 			cardFee: 140,
 			cardFeeVisual: "140",
-			imageName: "lloyds-premier.jpg", 
+			imageName: "lloyds-premier.jpg",
 			minSpend: 0,
 			minSpendVisual: "-",
 			spendTimeLimit: 0,
@@ -188,7 +188,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "",
 			cardFee: 24,
 			cardFeeVisual: "24",
-			imageName: "lloyds-choice.jpg", 
+			imageName: "lloyds-choice.jpg",
 			minSpend: 0,
 			minSpendVisual: "-",
 			spendTimeLimit: 0,
@@ -208,7 +208,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "",
 			cardFee: 0,
 			cardFeeVisual: "-",
-			imageName: "tsb.jpg", 
+			imageName: "tsb.jpg",
 			minSpend: 0,
 			minSpendVisual: "-",
 			spendTimeLimit: 0,
@@ -228,7 +228,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "",
 			cardFee: 0,
 			cardFeeVisual: "-",
-			imageName: "tsb-premier.jpg", 
+			imageName: "tsb-premier.jpg",
 			minSpend: 0,
 			minSpendVisual: "-",
 			spendTimeLimit: 0,
@@ -248,7 +248,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "£",
 			cardFee: 0,
 			cardFeeVisual: "-",
-			imageName: "virgin-white.jpg", 
+			imageName: "virgin-white.jpg",
 			minSpend: 2000,
 			minSpendVisual: "2000",
 			spendTimeLimit: 90,
@@ -268,7 +268,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "£",
 			cardFee: 14,
 			cardFeeVisual: "14",
-			imageName: "virgin-black.jpg", 
+			imageName: "virgin-black.jpg",
 			minSpend: 2000,
 			minSpendVisual: "2000",
 			spendTimeLimit: 90,
@@ -288,7 +288,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "£",
 			cardFee: 0,
 			cardFeeVisual: "-",
-			imageName: "hilton.jpg", 
+			imageName: "hilton.jpg",
 			minSpend: 750,
 			minSpendVisual: "750",
 			spendTimeLimit: 90,
@@ -308,7 +308,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "£",
 			cardFee: 0,
 			cardFeeVisual: "-",
-			imageName: "ihg.jpg", 
+			imageName: "ihg.jpg",
 			minSpend: 1,
 			minSpendVisual: "1",
 			spendTimeLimit: 90,
@@ -328,7 +328,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "£",
 			cardFee: 99,
 			cardFeeVisual: "99",
-			imageName: "ihg-premier.jpg", 
+			imageName: "ihg-premier.jpg",
 			minSpend: 1,
 			minSpendVisual: "1",
 			spendTimeLimit: 90,
@@ -348,7 +348,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "£",
 			cardFee: 125,
 			cardFeeVisual: "125",
-			imageName: "marriott.jpg", 
+			imageName: "marriott.jpg",
 			minSpend: 200,
 			minSpendVisual: "200",
 			spendTimeLimit: 180,
@@ -368,7 +368,7 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			minSpendSymbol: "£",
 			cardFee: 75,
 			cardFeeVisual: "75",
-			imageName: "spg.jpg", 
+			imageName: "spg.jpg",
 			minSpend: 1000,
 			minSpendVisual: "1000",
 			spendTimeLimit: 90,
@@ -402,10 +402,10 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 	];
 
 	/* Set first filter link to default */
-	$scope.selectedIndex = 0; 
-	
+	$scope.selectedIndex = 0;
+
 	/* Update active class for filter links on click */
-	$scope.selectFilter = function(i) { 
+	$scope.selectFilter = function(i) {
 		$scope.selectedIndex=i;
 	};
 
@@ -582,11 +582,11 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 angular.module("creditcardApp").controller('aboutController', function($scope) {
     $scope.title = 'About';
     $scope.paragraphs = [
-    	'My name is John Peden and I\'m the creator of this single page application. Credit Card Airline points was originally conceived as a way for me to generate referals to the credit cards you see on the homepage. Visitors would sign up, I\'d get a comission that was paid in points.',
-    	'While that was the original plan, the reality turned out to be that credit card companies are notoriously difficult to build that sort of relationship with. In the end, I decided to use the application as a training ground for Angular and front end web development in general. I came from a WordPress background originally and have loved getting to grips with the fantastic power and simplicity of Angular JS.'
+    	'What do you think of my credit card comparison tool? I\'d love to get your feedback so that I can improve it!',
+    	'Just hit \'Send Feedback\' below and fire an email over to me so that I can build the credit card comparison tool of your dreams!'
     ];
-    $scope.url = 'http://www.johncpeden.com';
-    $scope.linkAnchor = 'Learn More';
+    $scope.url = 'mailto:john@tweakdigital.co.uk';
+    $scope.linkAnchor = 'Send Feedback';
 });
 
 angular.module("creditcardApp").controller('contactController', function($scope) {
