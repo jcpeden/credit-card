@@ -11,9 +11,9 @@ angular.module("creditcardApp").config(function($routeProvider, $locationProvide
         })
 
         // route for the about page
-        .when('/about', {
+        .when('/feedback', {
             templateUrl : 'partials/page.html',
-            controller  : 'aboutController'
+            controller  : 'feedbackController'
         })
 
         // route for the contact page
@@ -59,9 +59,9 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		{
 			cardName: "American Express Preferred Rewards Gold",
 			cardStatus: 1,
-			cardBonus: 22000,
-			cardBonusVisual: 22000,
-			bonusValue: 220,
+			cardBonus: 20000,
+			cardBonusVisual: 20000,
+			bonusValue: 200,
 			bonusCurrency: "amex",
 			bonusCurrencyVisual: "Membership Reward points",
 			cardFeeSymbol: "£",
@@ -79,9 +79,9 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		{
 			cardName: "American Express Platinum",
 			cardStatus: 1,
-			cardBonus: 35000,
-			cardBonusVisual: 35000,
-			bonusValue: 350,
+			cardBonus: 30000,
+			cardBonusVisual: 30000,
+			bonusValue: 3000,
 			bonusCurrency: "amex",
 			bonusCurrencyVisual: "Membership Reward points",
 			cardFeeSymbol: "£",
@@ -99,9 +99,9 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		{
 			cardName: "British Airways American Express",
 			cardStatus: 1,
-			cardBonus: 3000,
-			cardBonusVisual: 3000,
-			bonusValue: 30,
+			cardBonus: 9000,
+			cardBonusVisual: 9000,
+			bonusValue: 90,
 			bonusCurrency: "avios",
 			bonusCurrencyVisual: "Avios",
 			cardFeeSymbol: "",
@@ -109,8 +109,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			cardFee: 0,
 			cardFeeVisual: "-",
 			imageName: "ba.jpg",
-			minSpend: 500,
-			minSpendVisual: "500",
+			minSpend: 1000,
+			minSpendVisual: "1000",
 			spendTimeLimit: 90,
 			spendTimeLimitVisual: "90",
 			spendTimeLimitDays: "days",
@@ -119,18 +119,18 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		{
 			cardName: "British Airways American Express Premium Plus",
 			cardStatus: 1,
-			cardBonus: 18000,
-			cardBonusVisual: 18000,
-			bonusValue: 180,
+			cardBonus: 25000,
+			cardBonusVisual: 25000,
+			bonusValue: 250,
 			bonusCurrency: "avios",
 			bonusCurrencyVisual: "Avios",
 			cardFeeSymbol: "£",
 			minSpendSymbol: "£",
-			cardFee: 125,
-			cardFeeVisual: "125",
+			cardFee: 195,
+			cardFeeVisual: "195",
 			imageName: "ba-premium-plus.jpg",
-			minSpend: 2000,
-			minSpendVisual: "2000",
+			minSpend: 3000,
+			minSpendVisual: "3000",
 			spendTimeLimit: 90,
 			spendTimeLimitVisual: "90",
 			spendTimeLimitDays: "days",
@@ -224,10 +224,10 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			bonusValue: 0,
 			bonusCurrency: "avios",
 			bonusCurrencyVisual: "-",
-			cardFeeSymbol: "",
+			cardFeeSymbol: "£",
 			minSpendSymbol: "",
-			cardFee: 0,
-			cardFeeVisual: "-",
+			cardFee: 50,
+			cardFeeVisual: "50",
 			imageName: "tsb-premier.jpg",
 			minSpend: 0,
 			minSpendVisual: "-",
@@ -239,9 +239,9 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		{
 			cardName: "Virgin Atlantic White American Express & Visa",
 			cardStatus: 1,
-			cardBonus: 10000,
-			cardBonusVisual: 10000,
-			bonusValue: 80,
+			cardBonus: 3000,
+			cardBonusVisual: 3000,
+			bonusValue: 30,
 			bonusCurrency: "virgin",
 			bonusCurrencyVisual: "Virgin Flying Club miles",
 			cardFeeSymbol: "",
@@ -249,8 +249,8 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			cardFee: 0,
 			cardFeeVisual: "-",
 			imageName: "virgin-white.jpg",
-			minSpend: 2000,
-			minSpendVisual: "2000",
+			minSpend: 1,
+			minSpendVisual: "1",
 			spendTimeLimit: 90,
 			spendTimeLimitVisual: "90",
 			spendTimeLimitDays: "days",
@@ -259,18 +259,18 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		{
 			cardName: "Virgin Atlantic Black American Express & Visa",
 			cardStatus: 1,
-			cardBonus: 25000,
-			cardBonusVisual: 25000,
-			bonusValue: 200,
+			cardBonus: 18500,
+			cardBonusVisual: 18500,
+			bonusValue: 185,
 			bonusCurrency: "virgin",
 			bonusCurrencyVisual: "Virgin Flying Club miles",
 			cardFeeSymbol: "£",
 			minSpendSymbol: "£",
-			cardFee: 14,
-			cardFeeVisual: "14",
+			cardFee: 140,
+			cardFeeVisual: "140",
 			imageName: "virgin-black.jpg",
-			minSpend: 2000,
-			minSpendVisual: "2000",
+			minSpend: 1,
+			minSpendVisual: "1",
 			spendTimeLimit: 90,
 			spendTimeLimitVisual: "90",
 			spendTimeLimitDays: "days",
@@ -299,9 +299,9 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		{
 			cardName: "IHG Rewards Club Visa",
 			cardStatus: 1,
-			cardBonus: 30000,
-			cardBonusVisual: 30000,
-			bonusValue: 150,
+			cardBonus: 10000,
+			cardBonusVisual: 10000,
+			bonusValue: 30,
 			bonusCurrency: "ihg",
 			bonusCurrencyVisual: "IHG Rewards Club points",
 			cardFeeSymbol: "",
@@ -319,9 +319,9 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		{
 			cardName: "IHG Rewards Club Premium Visa",
 			cardStatus: 1,
-			cardBonus: 60000,
-			cardBonusVisual: 60000,
-			bonusValue: 300,
+			cardBonus: 20000,
+			cardBonusVisual: 20000,
+			bonusValue: 60,
 			bonusCurrency: "ihg",
 			bonusCurrencyVisual: "IHG Rewards Club points",
 			cardFeeSymbol: "£",
@@ -341,13 +341,13 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			cardStatus: 1,
 			cardBonus: 10000,
 			cardBonusVisual: 10000,
-			bonusValue: 55,
+			bonusValue: 20,
 			bonusCurrency: "marriott",
 			bonusCurrencyVisual: "Marriott Rewards points",
-			cardFeeSymbol: "£",
+			cardFeeSymbol: "-",
 			minSpendSymbol: "£",
-			cardFee: 125,
-			cardFeeVisual: "125",
+			cardFee: 0,
+			cardFeeVisual: "",
 			imageName: "marriott.jpg",
 			minSpend: 200,
 			minSpendVisual: "200",
@@ -357,11 +357,11 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 			cardURL: "https://apply.creation.co.uk/microsites/marriott/?termsAndConditionsCode=MC5307&MC=29990017&operatorCode=WebMC&responseCode=MRRHP4"
 		},
 		{
-			cardName: "American Express Preferred Rewards Gold",
+			cardName: "Starwood Preferred Guest American Express",
 			cardStatus: 1,
 			cardBonus: 10000,
 			cardBonusVisual: 10000,
-			bonusValue: 100,
+			bonusValue: 125,
 			bonusCurrency: "spg",
 			bonusCurrencyVisual: "SPG points",
 			cardFeeSymbol: "£",
@@ -579,14 +579,12 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 
 }]);
 
-angular.module("creditcardApp").controller('aboutController', function($scope) {
-    $scope.title = 'About';
+angular.module("creditcardApp").controller('feedbackController', function($scope) {
+    $scope.title = 'Feedback';
     $scope.paragraphs = [
     	'What do you think of my credit card comparison tool? I\'d love to get your feedback so that I can improve it!',
-    	'Just hit \'Send Feedback\' below and fire an email over to me so that I can build the credit card comparison tool of your dreams!'
+    	'Feel free to send an email to john [at] tweakdigital [dot] co [dot] uk so that I can build the credit card comparison tool of your dreams!'
     ];
-    $scope.url = 'mailto:john@tweakdigital.co.uk';
-    $scope.linkAnchor = 'Send Feedback';
 });
 
 angular.module("creditcardApp").controller('contactController', function($scope) {
