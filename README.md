@@ -7,4 +7,3 @@ Learning Angular JS
 ### Admins ###
 
 * John Peden
-* Steven Sherrie
