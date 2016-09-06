@@ -38,5 +38,7 @@
   "subdomain": "creditcardairlinepoints",
   "analyze": true,
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp-uglify": "^2.0.0"
+  }
 }

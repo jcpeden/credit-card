@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
-    bower = require('gulp-bower');
+    bower = require('gulp-bower'),
+    uglify = require('gulp-uglify');
 
 /* Bower */
 gulp.task('bower', function() {
@@ -36,10 +37,23 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('./dist/css'));
 });
 
-/* Copy */
-gulp.task('copy', function() {
+/* Copy Images */
+gulp.task('copy:images', function() {
     gulp.src('./assets/images/**/*')
         .pipe(gulp.dest('./dist/images'));
+});
+
+/* Copy Scripts */
+gulp.task('copy:scripts', function() {
+    gulp.src('./assets/images/**/*')
+        .pipe(gulp.dest('./dist/images'));
+});
+
+// Gulp uglify task
+gulp.task('uglify', function() {
+    return gulp.src('./src/scripts/**/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'));
 });
 
 /* Watch */
