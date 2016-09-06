@@ -1,13 +1,31 @@
-var gulp = require('gulp');
-var webserver = require('gulp-webserver');
+/* Variables */
+var gulp = require('gulp'),
+    connect = require('gulp-connect'),
+    bower = require('gulp-bower');
 
-gulp.task('dev', function() {
-  gulp.src('.')
-    .pipe(webserver({
-      livereload: true,
-      directoryListing: false,
-      open: '/'
-    }));
+/* Bower */
+gulp.task('bower', function() {
+    return bower();
 });
 
-gulp.task('default', ['dev']);
+/* Webserver */
+gulp.task('connect', function() {
+    connect.server({
+        root: 'public/',
+        livereload: true
+    });
+});
+
+/* Livereload */
+gulp.task('reload', function () {
+    gulp.src('./public/*.html')
+        .pipe(connect.reload());
+});
+
+/* Watch */
+gulp.task('watch', function () {
+    gulp.watch(['./public/*.html'], ['reload']);
+});
+
+/* Default */
+gulp.task('default', ['connect', 'watch']);

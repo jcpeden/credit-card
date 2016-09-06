@@ -46,12 +46,12 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		avios: 1,
 		amex: 1,
 		spg: 1.5,
-		virgin: 0.8,
+		virgin: 1,
 		marriott: 0.55,
 		ihg: 0.5,
 		hilton: 150,
 		deductFee: 1,
-		hideNoBonusCards: 1,
+		hideNoBonusCards: 1
 	};
 
 	// Define credit card array
@@ -420,14 +420,11 @@ angular.module("creditcardApp").controller("mainController", ['$scope', function
 		        	card.cardStatus = 1;
 				});
 		}
-	}
+	};
 
 	$scope.cardFilter = function(cardStatus){
-	    if(cardStatus === 1){
-	       return true;
-	    }
-	    return false;
-	}
+	    return cardStatus === 1;
+	};
 
     $scope.updateAvios = function( ) {
 
